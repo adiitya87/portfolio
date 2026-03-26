@@ -19,9 +19,11 @@ const Terminal = () => {
   const inputRef = useRef(null);
   const bottomRef = useRef(null);
 
-  // Auto-scroll to the bottom whenever history updates
+  // Auto-scroll to the bottom ONLY when a new command is entered
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (history.length > 1) {
+      bottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }, [history]);
 
   // Keep input focused when clicking anywhere inside the terminal
