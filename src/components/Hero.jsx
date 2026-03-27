@@ -15,7 +15,7 @@ const Hero = () => {
           className="w-32 h-32 md:w-44 md:h-44 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl shadow-primary/10"
         >
           <img 
-            src="/profile.png" // Make sure this matches your file name in the public folder!
+            src="/profile.png?v=2" // Make sure this matches your file name in the public folder!
             alt="Aditya Pratap Singh Parihar" 
             className="w-full h-full object-cover"
           />
